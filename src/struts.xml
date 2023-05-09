@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"https://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="StrutsCRUDpack" extends="struts-default">
+		<action name="home" class="com.test.syena.EmpAction" method="register">
+			<result name="success">/success.jsp</result>
+			<result name="existed">/existed.jsp</result>
+		</action>
+
+		<action name="getAll" class="com.test.syena.EmpAction" method="getAll">
+			<result name="success">/getAll.jsp</result>
+		</action>
+
+		<action name="edit" class="com.test.syena.EmpAction" method="edit">
+			<result name="success">/update.jsp</result>
+		</action>
+
+		<action name="update" class="com.test.syena.EmpAction" method="update">
+			<result name="success">/update.jsp</result>
+		</action>
+
+		<action name="delete" class="com.test.syena.EmpAction" method="delete">
+			<result name="success">/getAll.jsp</result>
+			<result name="failure">/failure.jsp</result>
+		</action>
+
+	</package>
+</struts>
