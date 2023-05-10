@@ -21,13 +21,19 @@ public class EmpService {
 	}
 
 	public String Registration(Emp emp) throws Exception {
+		
+//		String sql1 = "select * from strutsemp where id = '" + emp.getId() + "'";
+		String sql1 = "{call strutsemp_pack.getOne(emp.getId())}";
 
-		pst = con.prepareStatement("select * from strutsemp where id = '" + emp.getId() + "'");
+		pst = con.prepareStatement(sql1);
 		rs = pst.executeQuery();
 		if (rs.next()) {
 			status = "existed";
 		} else {
-			pst = con.prepareStatement("insert into strutsemp(id,name,address,salary) values (?,?,?,?)");
+//			 String sql = "insert into strutsemp(id,name,address,salary) values (?,?,?,?)";
+			
+			String sql = "{call strutsemp_pack.register(?,?,?,?)}";
+			pst = con.prepareStatement(sql);
 
 			pst.setInt(1, emp.getId());
 			pst.setString(2, emp.getName());
@@ -42,8 +48,12 @@ public class EmpService {
 
 	public List<Emp> getAllData() throws SQLException {
 		List<Emp> list = new ArrayList<Emp>();
+		
+//		String sql = "select * from strutsemp";
+		
+		String sql = "{call strutsemp_pack.getAll}";
 
-		pst = con.prepareStatement("select * from strutsemp");
+		pst = con.prepareStatement(sql);
 		rs = pst.executeQuery();
 		while (rs.next()) {
 			list.add(new Emp(rs.getInt("id"), rs.getString("name"), rs.getString("address"), rs.getInt("salary")));
@@ -54,7 +64,11 @@ public class EmpService {
 
 	public Emp getDataById(int id) throws Exception {
 		Emp emp = new Emp();
-		pst = con.prepareStatement("select * from strutsemp where id = '" + emp.getId() + "'");
+		
+//		String sql = "select * from strutsemp where id = '" + emp.getId() + "'";
+		String sql = "{call strutsemp_pack.getOne(emp.getId())}";
+		
+		pst = con.prepareStatement(sql);
 		rs = pst.executeQuery();
 
 		if (rs.next()) {
@@ -69,7 +83,10 @@ public class EmpService {
 
 	public String updateEmp(Emp emp) throws Exception {
 
-		pst = con.prepareStatement("update strutsemp set name = ?, address = ?, salary = ? where id = ?");
+//		String sql = "update strutsemp set name = ?, address = ?, salary = ? where id = ?";
+		String sql = "{call strutsemp_pack.update_emp(?,?,?,?)}";
+		
+		pst = con.prepareStatement(sql);
 
 		pst.setString(1, emp.getName());
 		pst.setString(2, emp.getAddress());
@@ -82,8 +99,11 @@ public class EmpService {
 	}
 
 	public boolean deleteEmp(int id) throws Exception {
+		
+//		String sql = "delete from strutsemp where id = ?";
+		String sql = "{call strutsemp_pack.delete_emp(?)}";
 
-		pst = con.prepareStatement("delete from strutsemp where id = ?");
+		pst = con.prepareStatement(sql);
 		pst.setInt(1, id);
 
 		int value = pst.executeUpdate();
