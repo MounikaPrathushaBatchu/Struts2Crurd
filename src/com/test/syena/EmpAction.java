@@ -18,12 +18,15 @@ public class EmpAction extends ActionSupport {
 	public List<Emp> getList() {
 		return list;
 	}
+
 	public void setList(List<Emp> list) {
 		this.list = list;
 	}
+
 	public Emp getEmp() {
 		return emp;
 	}
+
 	public void setEmp(Emp emp) {
 		this.emp = emp;
 	}
@@ -36,12 +39,12 @@ public class EmpAction extends ActionSupport {
 
 		return status;
 	}
-	
+
 	public String update() throws Exception {
-		
+
 		EmpService ec = new EmpService();
 		ec.updateEmp(emp);
-		
+
 		return "success";
 	}
 
@@ -52,34 +55,37 @@ public class EmpAction extends ActionSupport {
 
 		return "success";
 	}
-	
+
 	public String edit() throws Exception {
-		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
+		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext()
+				.get(ServletActionContext.HTTP_REQUEST);
 		int id = Integer.parseInt(request.getParameter("id"));
-		
+
 		EmpService ec = new EmpService();
 		Emp e = ec.getDataById(id);
-		
+
 		emp.setId(e.getId());
 		emp.setName(e.getName());
 		emp.setAddress(e.getAddress());
 		emp.setSalary(e.getSalary());
-		
+
 		return "success";
 	}
+
 	public String delete() throws Exception {
-		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
+		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext()
+				.get(ServletActionContext.HTTP_REQUEST);
 		int id = Integer.parseInt(request.getParameter("id"));
-		
+
 		EmpService ec = new EmpService();
 		boolean status = ec.deleteEmp(id);
-		
-		if(status) {
+
+		if (status) {
 			getAll();
 			return "success";
 		} else {
 			return "failure";
 		}
-		
+
 	}
 }

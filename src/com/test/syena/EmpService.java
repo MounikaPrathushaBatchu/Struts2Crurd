@@ -22,9 +22,9 @@ public class EmpService {
 
 	public String Registration(Emp emp) throws Exception {
 
-		pst = con.prepareStatement("select * from strutsemp where id = '"+emp.getId()+"'");
+		pst = con.prepareStatement("select * from strutsemp where id = '" + emp.getId() + "'");
 		rs = pst.executeQuery();
-		if(rs.next()) {
+		if (rs.next()) {
 			status = "existed";
 		} else {
 			pst = con.prepareStatement("insert into strutsemp(id,name,address,salary) values (?,?,?,?)");
@@ -45,8 +45,8 @@ public class EmpService {
 
 		pst = con.prepareStatement("select * from strutsemp");
 		rs = pst.executeQuery();
-		while(rs.next()) {
-			list.add(new Emp(rs.getInt("id"),rs.getString("name"),rs.getString("address"),rs.getInt("salary")));
+		while (rs.next()) {
+			list.add(new Emp(rs.getInt("id"), rs.getString("name"), rs.getString("address"), rs.getInt("salary")));
 		}
 		System.out.println(list);
 		return list;
@@ -54,10 +54,10 @@ public class EmpService {
 
 	public Emp getDataById(int id) throws Exception {
 		Emp emp = new Emp();
-		pst = con.prepareStatement("select * from strutsemp where id = '"+emp.getId()+"'");
+		pst = con.prepareStatement("select * from strutsemp where id = '" + emp.getId() + "'");
 		rs = pst.executeQuery();
 
-		if(rs.next()) {
+		if (rs.next()) {
 			emp.setId(rs.getInt("id"));
 			emp.setName(rs.getString("name"));
 			emp.setAddress(rs.getString("address"));
@@ -87,7 +87,7 @@ public class EmpService {
 		pst.setInt(1, id);
 
 		int value = pst.executeUpdate();
-		if(value > 0) {
+		if (value > 0) {
 			return true;
 		}
 		return false;
