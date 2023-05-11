@@ -19,7 +19,7 @@
 		</action>
 
 		<action name="update" class="com.test.syena.EmpAction" method="update">
-			<result name="success">/update.jsp</result>
+			<result name="success">/success.jsp</result>
 		</action>
 
 		<action name="delete" class="com.test.syena.EmpAction" method="delete">

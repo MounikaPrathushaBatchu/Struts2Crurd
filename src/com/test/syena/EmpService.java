@@ -1,5 +1,6 @@
 package com.test.syena;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,12 +9,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import oracle.jdbc.internal.OracleTypes;
+
 public class EmpService {
 
 	String status = "";
 	Connection con;
 	PreparedStatement pst;
 	ResultSet rs;
+	CallableStatement cs;
 
 	public EmpService() throws Exception {
 		Class.forName("oracle.jdbc.OracleDriver");
@@ -23,11 +27,18 @@ public class EmpService {
 	public String Registration(Emp emp) throws Exception {
 		
 //		String sql1 = "select * from strutsemp where id = '" + emp.getId() + "'";
-		String sql1 = "{call strutsemp_pack.getOne(emp.getId())}";
-
-		pst = con.prepareStatement(sql1);
-		rs = pst.executeQuery();
-		if (rs.next()) {
+//		pst = con.prepareStatement(sql1);
+//		rs = pst.executeQuery();
+		
+		String sql1 = "{call strutsemp_pack.getOne(?,?)}";
+		cs = con.prepareCall(sql1);
+		cs.setInt(1, emp.getId());
+		cs.registerOutParameter(2, OracleTypes.CURSOR);
+		cs.execute();
+		rs = (ResultSet) cs.getObject(2);
+		
+		boolean b = rs.next();
+		if (b == true) {
 			status = "existed";
 		} else {
 //			 String sql = "insert into strutsemp(id,name,address,salary) values (?,?,?,?)";
@@ -51,10 +62,13 @@ public class EmpService {
 		
 //		String sql = "select * from strutsemp";
 		
-		String sql = "{call strutsemp_pack.getAll}";
+		String sql = "{call strutsemp_pack.getAll(?)}";
 
-		pst = con.prepareStatement(sql);
-		rs = pst.executeQuery();
+		cs = con.prepareCall(sql);
+		cs.registerOutParameter(1, OracleTypes.CURSOR);
+		cs.execute();
+		rs = (ResultSet) cs.getObject(1);
+		
 		while (rs.next()) {
 			list.add(new Emp(rs.getInt("id"), rs.getString("name"), rs.getString("address"), rs.getInt("salary")));
 		}
@@ -66,10 +80,16 @@ public class EmpService {
 		Emp emp = new Emp();
 		
 //		String sql = "select * from strutsemp where id = '" + emp.getId() + "'";
-		String sql = "{call strutsemp_pack.getOne(emp.getId())}";
+//		pst = con.prepareStatement(sql);
+//		rs = pst.executeQuery();
 		
-		pst = con.prepareStatement(sql);
-		rs = pst.executeQuery();
+		String sql = "{call strutsemp_pack.getOne(?,?)}";
+		
+		cs = con.prepareCall(sql);
+		cs.setInt(1, id);
+		cs.registerOutParameter(2, OracleTypes.CURSOR);
+		cs.execute();
+		rs =(ResultSet) cs.getObject(2);
 
 		if (rs.next()) {
 			emp.setId(rs.getInt("id"));

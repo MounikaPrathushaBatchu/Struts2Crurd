@@ -21,6 +21,10 @@ tfoot {
 </style>
 </head>
 <body>
+	<br>
+	<h3>Syena InfoSoft</h3>
+	<h4>All Data</h4>
+	<a href="home.jsp">Home</a> <br><br>
 	<table border="1" align="left">
 		<tr>
 			<th>ID</th>
