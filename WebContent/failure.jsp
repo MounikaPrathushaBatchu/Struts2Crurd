@@ -8,8 +8,8 @@
 </head>
 <body>
 	<br>
-	<h3>Syena InfoSoft</h3>
-	<h4>Failure Form</h4>
+	<h1 align="center">Syena InfoSoft</h1>
+	<h3 align="center">Failure Page</h3>
 	<font color="red"> 
 		<b>Oops, something went wrong!.......</b>
 	</font>

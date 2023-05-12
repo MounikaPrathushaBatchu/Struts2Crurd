@@ -8,8 +8,8 @@
 </head>
 <body>
 	<br>
-	<h3>Syena InfoSoft</h3>
-	<h4>Success Form</h4>
+	<h1 align="center">Syena InfoSoft</h1>
+	<h3 align="center">Success Page</h3>
 	<font color="green"> 
 		<b>Operation Successfully done.......</b>
 	</font>

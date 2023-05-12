@@ -8,10 +8,10 @@
 </head>
 <body>
 	<br>
-	<h3>Syena InfoSoft</h3>
-	<h4>Existed Form</h4>
+	<h1 align="center">Syena InfoSoft</h1>
+	<h3 align="center">Existed Page</h3>
 	<font color="orange">
-		<b>Employee already existed..........</b>
+		<b >Employee already existed..........</b>
 	</font>
 </body>
 </html>

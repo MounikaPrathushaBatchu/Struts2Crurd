@@ -9,8 +9,8 @@
 </head>
 <body>
 	<br>
-	<h3>Syena InfoSoft</h3>
-	<h4>Registration Form</h4>
+	<h1 align="center">Syena InfoSoft</h1>
+	<h3 align="center">Registration Form</h3>
 	
 	<form method="POST" action="home">
 		<label>ID	</label>

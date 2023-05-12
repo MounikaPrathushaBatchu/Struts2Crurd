@@ -13,15 +13,65 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/struts2jars/commons-fileupload-1.4.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/commons-lang3-3.8.1.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/freemarker-2.3.31.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/javassist-3.20.0-GA.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/log4j-api-2.12.4.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/ognl-3.1.29.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/struts2-core-2.5.30.jar"/>
-	<classpathentry kind="lib" path="D:/struts2jars/xwork-2.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/ojdbc6-11.2.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/struts2jars/commons-fileupload-1.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/commons-io-2.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/commons-lang3-3.8.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/freemarker-2.3.31.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/javassist-3.20.0-GA.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/log4j-api-2.12.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/ognl-3.1.29.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/struts2-core-2.5.30.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/struts2jars/xwork-2.0.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/ojdbc6-11.2.0.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jstl-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/javax.servlet-api-4.0.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
