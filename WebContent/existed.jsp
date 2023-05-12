@@ -13,5 +13,7 @@
 	<font color="orange">
 		<b >Employee already existed..........</b>
 	</font>
+	<br>
+	<a href="getAll">Get All Employees</a>
 </body>
 </html>

@@ -11,6 +11,36 @@ a {
 	display: block;
 	text-align: center;
 }
+
+input[type=text] {
+	width: 100%;
+	padding: 10px 20px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 2px;
+	box-sizxing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: green;
+	color: white;
+	padding: 10px 20px;
+	margin: 5px 0;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+div {
+	width: 100px;
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+
 </style>
 </head>
 <body>
@@ -18,21 +48,23 @@ a {
 	<h1 align="center">Syena InfoSoft</h1>
 	<h3 align="center">Update Form</h3>
 	
+	<div>
 	<form method="POST" action="update">
-		<label for="id">ID	</label> 
+		<label for="id">ID	:</label> 
 		<input type="text" name="emp.id" value="${emp.id}" /><br> 
 		
-		<label for="name">Name	</label> 
+		<label for="name">Name	:</label> 
 		<input type="text" name="emp.name" value="${emp.name}" /><br>
 		
-		<label for="address">Address	</label>
+		<label for="address">Address	:</label>
 		<input type="text" name="emp.address" value="${emp.address}" /><br>
 		
-		<label for="salary">Salary	</label>
+		<label for="salary">Salary	:</label>
 		<input type="text" name="emp.salary" value="${emp.salary}" /><br>
 		
 		<input type = "submit" value = "Update" />
 	</form>
+	</div>
 	<br>
 	<a href="getAll">Get All Employees</a>
 	

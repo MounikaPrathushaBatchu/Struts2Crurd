@@ -13,5 +13,7 @@
 	<font color="red"> 
 		<b>Oops, something went wrong!.......</b>
 	</font>
+	<br>
+	<a href="getAll">Get All Employees</a>
 </body>
 </html>

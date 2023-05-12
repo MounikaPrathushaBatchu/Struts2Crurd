@@ -11,30 +11,60 @@ a {
 	display: block;
 	text-align: center;
 }
+
+input[type=text] {
+	width: 100%;
+	padding: 10px 20px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 2px;
+	box-sizxing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: green;
+	color: white;
+	padding: 10px 20px;
+	margin: 5px 0;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+div {
+	width: 100px;
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
 </style>
 </head>
 <body>
-	<br>
 	<h1 align="center">Syena InfoSoft</h1>
 	<h3 align="center">Registration Form</h3>
-	
-	<form method="POST" action="home">
-		<label>ID	</label>
-		<input type="text" name="emp.id" /><br>
-		
-		<label>Name	</label>
-		<input type="text" name="emp.name" /><br>
-		
-		<label>Address	</label>
-		<input type="text" name="emp.address" /><br>
-		
-		<label>Salary	</label>
-		<input type="text" name="emp.salary" /><br><br>
-		
-		<input type="submit" value="Register" />
-	</form>
+
+	<div>
+		<form method="POST" action="home">
+			<label>ID :</label> 
+			<input type="text" name="emp.id" /><br>
+			
+			<label>Name	:</label> 
+			<input type="text" name="emp.name" /><br> 
+			
+			<label>Address	:</label> 
+			<input type="text" name="emp.address" /><br>
+			
+			<label>Salary	:</label> 
+			<input type="text" name="emp.salary" /><br>
+			 
+			<input type="submit" value="Register" />
+		</form>
+	</div>
 	<br>
-	
+
 	<%-- <s:form method="POST" action="home">
 		<s:textfield name="emp.id" label="ID"></s:textfield>
 		<s:textfield name="emp.name" label="Name"></s:textfield>

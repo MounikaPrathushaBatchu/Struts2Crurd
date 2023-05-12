@@ -13,5 +13,7 @@
 	<font color="green"> 
 		<b>Operation Successfully done.......</b>
 	</font>
+	<br>
+	<a href="getAll">Get All Employees</a>
 </body>
 </html>
