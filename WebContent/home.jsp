@@ -34,10 +34,12 @@ input[type=submit] {
 }
 
 div {
-	width: 100px;
-	padding: 5px;
-	box-sizing: border-box;
-	border-radius: 2px;
+	margin-bottom:10px;
+}
+
+.form-center {
+	display:flex;
+	justify-content:center;
 }
 
 </style>
@@ -46,19 +48,21 @@ div {
 	<h1 align="center">Syena InfoSoft</h1>
 	<h3 align="center">Registration Form</h3>
 
-	<div>
+	<div class="form-center">
 		<form method="POST" action="home">
-			<label>ID :</label> 
-			<input type="text" name="emp.id" /><br>
+			<label>ID :</label>
+			<input type="text" maxlength="4" name="emp.id" /><br>
 			
 			<label>Name	:</label> 
 			<input type="text" name="emp.name" /><br> 
 			
-			<label>Address	:</label> 
+			<label for="address">Address	:</label>
 			<input type="text" name="emp.address" /><br>
+			<!-- <textarea id="address" name="emp.address" style="height:200px"></textarea> -->
+			
 			
 			<label>Salary	:</label> 
-			<input type="text" name="emp.salary" /><br>
+			<input type="text" maxlength="6" name="emp.salary" /><br>
 			 
 			<input type="submit" value="Register" />
 		</form>

@@ -34,12 +34,13 @@ input[type=submit] {
 }
 
 div {
-	width: 100px;
-	padding: 5px;
-	box-sizing: border-box;
-	border-radius: 2px;
+	margin-bottom:10px;
 }
 
+.form-center {
+	display:flex;
+	justify-content:center;
+}
 
 </style>
 </head>
@@ -48,7 +49,7 @@ div {
 	<h1 align="center">Syena InfoSoft</h1>
 	<h3 align="center">Update Form</h3>
 	
-	<div>
+	<div class="form-center">
 	<form method="POST" action="update">
 		<label for="id">ID	:</label> 
 		<input type="text" name="emp.id" value="${emp.id}" /><br> 
