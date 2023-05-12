@@ -19,17 +19,20 @@ th, td {
 tfoot {
 	text-align: left;
 }
+
+a {
+	display: block;
+	text-align: center;
+}
 </style>
 </head>
 <body>
 	<br>
 	<h1 align="center">Syena InfoSoft</h1>
 	<h3 align="center">All Data</h3>
-
+	<!-- <p align="center"> -->
 	<a href="home.jsp">Home</a>
-	<br>
-	<br>
-
+	<!-- </p> -->
 	<table border="1" align="center">
 		<tr>
 			<th>ID</th>
