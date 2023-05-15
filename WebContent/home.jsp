@@ -54,7 +54,7 @@ div {
 			<input type="text" maxlength="4" name="emp.id" /><br>
 			
 			<label>Name	:</label> 
-			<input type="text" name="emp.name" /><br> 
+			<input type="text" name="emp.name" maxlength="15" /><br> 
 			
 			<label for="address">Address	:</label>
 			<input type="text" name="emp.address" /><br>
